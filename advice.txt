@@ -1,0 +1,31 @@
+BEGIN {FS="\t"};
+$1 ~ /n[a-z]ll/ { sum1 += 1 }
+$2 ~ /null/ { sum2 += 1 }
+$3 ~ /null/ { sum3 += 1 }
+$4 ~ /null/ { sum4 += 1 }
+$5 ~ /null/ { sum5 += 1 }
+$6 ~ /null/ { sum6 += 1 }
+$7 ~ /null/ { sum7 += 1 }
+$8 ~ /null/ { sum8 += 1 }
+$9 ~ /null/ { sum9 += 1 }
+$10 ~ /null/ { sum10 += 1 }
+$11 ~ /null/ { sum11 += 1 }
+$12 ~ /null/ { sum12 += 1 }
+{ if (NF!=12) error += 1 }
+#{ if (NF!=12) print FILENAME "  " FNR " Field number= " NF }
+#{ if (NF!=12) print $1 "  " $12 }
+END { print "1st field is missed: " sum1 }
+END { print "2nd field is missed: " sum2 }
+END { print "3rd field is missed: " sum3 }
+END { print "4th field is missed: " sum4 }
+END { print "5th field is missed: " sum5 }
+END { print "6st field is missed: " sum6 }
+END { print "7th field is missed: " sum7 }
+END { print "8th field is missed: " sum8 }
+END { print "9tn field is missed: " sum9 }
+END { print "10th field is missed: " sum10 }
+END { print "11th field is missed: " sum11 }
+END { print "12th field is missed: " sum12 }
+END { print "Rows number with incorrect fields count: " error }
+END { print "Total number of rows: " NR }
+
