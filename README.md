@@ -20,17 +20,17 @@ Example of usage to scrap pages from hh.ru/vacancy/8000000 to hh.ru/vacancy/9000
 
 Resulted files are TAB delimited TXT files that contain vacancies info. One row - one vacancy page.
 Columns of file:
-	- Vacancy URL
-	- Publication date
-	- Salary
-	- City
-	- Years of experience
-	- Vacancy title
-	- Organization name
-	- Organization link
-	- Vacancy mode
-	- Required skills
-	- Vacancy description
+- Vacancy URL
+- Publication date
+- Salary
+- City
+- Years of experience
+- Vacancy title
+- Organization name
+- Organization link
+- Vacancy mode
+- Required skills
+- Vacancy description
 
 Perform some analysis of resulted files:
 
